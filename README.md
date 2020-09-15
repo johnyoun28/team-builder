@@ -4,6 +4,8 @@ This project allows you to practice the concepts and techniques learned in this 
 
 ## Introduction
 
+commit
+
 In this project you'll build an app that will keep track of memebers of a team. You'll be able to add members to this team as well as edit their details.
 
 ## Instructions
@@ -89,5 +91,5 @@ After finishing your required elements, you can push your work further. These go
 
 ## Submission Format
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
 - [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
