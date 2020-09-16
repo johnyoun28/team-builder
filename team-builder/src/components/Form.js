@@ -8,7 +8,7 @@ const initalTeam = [
   },
 ];
 
-function Form() {
+function Form(props) {
   const [formValues, setFormValues] = useState(initalTeam);
 
   const change = (evt) => {
@@ -18,20 +18,22 @@ function Form() {
 
   const submit = (evt) => {
     evt.preventDefault();
-    const newPerson = {
-      name: formValues.name.trim(),
-      email: formValues.email.trim(),
-      role: formValues.role.trim(),
-    };
-    setFormValues(initalTeam);
+    console.log('here', props);
+    props.form(formValues);
+    // const newPerson = {
+    //   name: formValues.name.trim(),
+    //   email: formValues.email.trim(),
+    //   role: formValues.role,
+    // };
+    // setTeamMem([...team, newPerson]);
+    // const [teamMem, setTeamMem] = useState(team);
   };
 
   return (
-    <form onSubmit={submit}>
-      <div className="container">
+    <div className="container">
+      <form onSubmit={submit}>
         <h1>Teams</h1>
         <label>
-          {' '}
           Name
           <input
             name="name"
@@ -45,7 +47,6 @@ function Form() {
 
         <br />
         <label>
-          {' '}
           Email
           <input
             name="email"
@@ -59,7 +60,6 @@ function Form() {
 
         <br />
         <label>
-          {' '}
           Role
           <select name="role" value={formValues.role} onChange={change}>
             <option value="">--select role--</option>
@@ -71,8 +71,8 @@ function Form() {
 
         <br />
         <button type="submit">Submit</button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 
